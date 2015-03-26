@@ -211,7 +211,7 @@ html {
 ------------------------------------------------------ */
 html {
   background: white;
-  background: #f9eddf; }
+  background: #3c3b43; }
 
 body {
   font-family: georgia, "Times New Roman", serif;
@@ -219,6 +219,7 @@ body {
   font-style: normal;
   line-height: 1.5;
   color: #3c3b43;
+  background: #fcf9f4;
   font-size: 90%; }
   body i, body em {
     font-style: italic; }
@@ -226,12 +227,15 @@ body {
     font-weight: 700; }
   @media screen and (min-width: 48em) {
     body {
-      font-size: 100%; } }
+      font-size: 100%;
+      margin: 0 4vw; } }
   @media (min-width: 70em) {
     body {
+      margin: 0 4vw;
       font-size: 1.35vw; } }
   @media (min-width: 80em) {
     body {
+      margin: 0 6vw;
       font-size: 1.25vw; } }
 
 /* @headings
@@ -3567,8 +3571,8 @@ img {
   zoom: 1;
   position: relative;
   padding: 1em 0;
-  border-bottom: 1px solid #f9eddf;
-  color: #f9eddf;
+  border-bottom: 1px solid #fcf9f4;
+  color: #fcf9f4;
   background: #3c3b43; }
   .site-header:before, .site-header:after {
     content: " ";
