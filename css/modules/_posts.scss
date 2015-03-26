@@ -14,6 +14,13 @@
 	@include clearfix();
 }
 
+.post__title {
+  text-align: center;
+  @include bp-at-least(26.25em) {
+    text-align: left;
+  }
+}
+
 
 .post__lead {
   @include serif();
@@ -22,6 +29,10 @@
   margin: 1.35em 0 2em;
   font-size: 1em;
   font-style: italic;
+  text-align: center;
+  @include bp-at-least(26.25em) {
+    text-align: left;
+  }
 }
 
 .post__main {

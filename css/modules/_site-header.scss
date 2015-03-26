@@ -16,6 +16,10 @@
   border-bottom: 1px solid rgba($color__black, .5);
   //color: $color__offwhite;
   //background: $color__black;
+  font-size: 120%;
+  @include bp-at-least(35em) {
+    font-size: 100%;
+  }
   @include bp-at-least($breakpoint__md) {
     text-align: center;
   }
@@ -39,15 +43,21 @@
 ------------------------------------------------------ */
 
 .branding {
-  margin: 0 2em 0 0;
+  margin: 0 auto .5em;
   width: 4em;
   text-decoration: none;
-  display: inline-block;
+  display: block;
+  @include bp-at-least(26.25em) {
+    float: left;
+    margin: .75em 0 0 0;
+    width: 5.5em;
+  }
   @include bp-at-least($breakpoint__md) {
     position: absolute;
     top: 50%;
     left: 50%;
     margin: -1em 0 0 -2em;
+    width: 4em;
   }
 }
 
@@ -65,7 +75,8 @@
 -----------------------------------------------------  */
 .site-nav,
 .secondary-nav {
-  display: inline;
+  margin: 0 auto;
+  text-align: center;
   a {
     display: inline-block;
     height: 2em;
@@ -74,9 +85,7 @@
     margin-left: .5em;
     text-decoration: none;
     opacity: .75;
-    &:first-child {
-      margin-left: 0;
-    }
+    
     span {
       @include sans();
       padding-left: .25em;
@@ -88,13 +97,25 @@
       opacity: 1;
     }
   }
-  
+  @include bp-at-least(26.25em) {
+    float: right;
+  }
+  @include bp-at-least(35em) {
+    display: inline;
+    margin: 0;
+    a {
+      height: 4em;
+      line-height: 4em;
+    }
+  }  
 }
+
 @include bp-at-least($breakpoint__md) {
   .site-nav a,
   .secondary-nav a {
     height: 3em;
     line-height: 3em;
+
   }
   .site-nav {  
     float: left;

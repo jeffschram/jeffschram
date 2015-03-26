@@ -13,5 +13,8 @@
 // The page wrap
 //
 .page {
-  margin-top: 6em;
+  margin-top: 10%;
+  @include bp-at-least($breakpoint__lg) {
+  	margin-top: 7.5%;
+  }
 }
