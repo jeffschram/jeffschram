@@ -1,0 +1,106 @@
+/**
+
+  @site-header
+--------------------------------------------------------
+  modules/_site-header.scss
+--------------------------------------------------------
+
+  Site-wide header
+
+------------------------------------------------------ */
+
+$black-opaque: rgba($color__black, .5);
+
+.site-header {
+  @include clearfix();
+  position: relative;
+  padding: 1em 0;
+  border-bottom: 1px solid $color__offwhite;
+  border-color: rgba($color__offwhite, .5);
+  @include bp-at-least($breakpoint__md) {
+    text-align: center;
+  }
+}
+
+
+
+
+
+/* @branding
+--------------------------------------------------------
+
+  The logo & (optional) wordmark
+
+  Example: Branding logo
+  <a class="branding" href="/">
+    <img class="branding__logo img--title" src="images/logo.svg" alt="My Company">
+    <h1 class="branding__wordmark">My Company</h1>
+  </a>
+
+------------------------------------------------------ */
+
+.branding {
+  margin: 0 2em 0 0;
+  width: 4em;
+  text-decoration: none;
+  display: inline-block;
+  @include bp-at-least($breakpoint__md) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -1em 0 0 -2em;
+  }
+}
+
+
+
+
+
+/*
+
+  @site-nav
+--------------------------------------------------------
+
+  The main site navigation.
+
+-----------------------------------------------------  */
+.site-nav,
+.secondary-nav {
+  display: inline;
+  a {
+    display: inline-block;
+    height: 2em;
+    line-height: 2em;
+    padding: 0 .5em;
+    margin-left: .5em;
+    text-decoration: none;
+    opacity: .75;
+    &:first-child {
+      margin-left: 0;
+    }
+    span {
+      @include sans();
+      padding-left: .25em;
+      font-size: .75em;
+      text-transform: uppercase;
+      margin-top: -.2em;
+    }
+    &:hover, &:focus {
+      opacity: 1;
+    }
+  }
+  
+}
+@include bp-at-least($breakpoint__md) {
+  .site-nav a,
+  .secondary-nav a {
+    height: 3em;
+    line-height: 3em;
+  }
+  .site-nav {  
+    float: left;
+  }
+  .secondary-nav {  
+    float: right;
+  }
+}

@@ -1,0 +1,71 @@
+/**
+
+  @grid guide
+--------------------------------------------------------
+
+  Styles for the Skyline Grid Guide jQuery plugin that
+  shows grid guides overlayed on top of your site by
+  pressing the 'g' key
+
+-----------------------------------------------------  */
+
+// Define the $skyline-grid-guide__baseline-height val
+$skyline-grid-guide__baseline-height: 1em;
+
+.skyline-grid-guide {
+  opacity: .5;
+  pointer-events: none;
+  position: fixed;
+  z-index: 3000; // super-level 3
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  width: 100%;
+  min-height: 100%;
+  display: none;
+}
+
+.skyline-grid-guide .g {
+  background: rgba(146, 189, 202, 0.25);
+}
+
+.skyline-grid-guide .g div {
+  background: rgba(255, 255, 255, .2);
+  border-right: 1px solid rgba(255,255,255,.2);
+  border-left: 1px solid rgba(255,255,255,.2);
+  height: 8000px;
+}
+
+
+.skyline-grid-guide__baselines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.skyline-grid-guide__baseline {
+  display: block;
+  height: $skyline-grid-guide__baseline-height;
+  border-bottom: 1px solid rgba(160, 155, 155, 0.25);
+  &:nth-child(even) {
+    border-bottom: 1px solid rgba(160, 155, 155, 0.5);
+  }
+}
+
+.skyline-dev-guides {
+
+  .skyline-grid-guide {
+    display: block;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    background: rgba(yellow, .5);
+  }
+
+  p {
+    background: rgba(yellow, .5);
+  }
+
+}

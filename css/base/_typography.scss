@@ -1,0 +1,309 @@
+/**
+
+  @Typography
+--------------------------------------------------------
+  Base typography styles used throughout the site.
+
+  @toc
+
+  - fonts
+  - html
+  - body
+  - anti-fout
+  - headings
+  - paragraphs
+  - address
+
+------------------------------------------------------ */
+
+
+
+
+
+/* @fonts
+--------------------------------------------------------
+
+  Naming convention for font mixins are:
+  name-weight(if not normal)-style(if applicable)
+
+------------------------------------------------------ */
+
+
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400|Playfair+Display:700,700italic,400italic|Open+Sans:400,300,600,700);
+
+
+@mixin sans-light () {
+  font-family: "Lato", helvetica, arial, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: .05em;
+  b, strong {
+    @include sans();
+  }
+}
+
+@mixin sans () {
+  font-family: "Lato", helvetica, arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: .05em;
+}
+
+
+
+@mixin serif () {
+  font-family: georgia, "Times New Roman", serif;
+  font-weight: 400;
+  font-style: normal;
+  i, em { 
+    font-style: italic; 
+  }
+  b, strong { 
+    font-weight: 700;
+  }
+}
+
+
+@mixin serif-display-light-italic () {
+  font-family: "Playfair Display", georgia, "Times New Roman", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+@mixin serif-display () {
+  font-family: "Playfair Display", georgia, "Times New Roman", serif;
+  font-weight: 700;
+  font-style: normal;
+  margin-top: -.35em;
+  i, em {
+    @include serif-display-italic();
+  }
+}
+
+@mixin serif-display-italic () {
+  font-family: "Playfair Display", georgia, "Times New Roman", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+
+
+/* @html
+------------------------------------------------------ */
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+/* @body
+------------------------------------------------------ */
+
+body {
+  @include serif();
+  line-height: 1.5;
+  color: $color__offwhite;
+  @media (min-width: 70em) {
+      font-size: 1.35vw;
+  }
+  @media (min-width: 80em) {
+      font-size: 1.25vw;
+  }
+}
+
+
+
+
+/* @headings
+------------------------------------------------------ */
+
+// H1
+h1, .h1 {
+  @include sans-light();
+  line-height: 1.225;
+  font-size: 2.5em;
+  margin-top: -.35em;
+  margin-bottom: .25em;
+  text-transform: uppercase;
+  letter-spacing: -.01em;
+}
+
+
+// H2
+h2, .h2 {
+  @include serif-display();
+}
+
+
+
+// H3
+h3, .h3 {
+  @include serif();
+}
+
+
+
+// H4
+h4, .h4 {
+  @include sans();
+}
+
+
+
+// H5
+h5, .h5 {
+  @include sans();
+}
+
+
+
+// H6
+h6, .h6 {
+  @include sans();
+}
+
+
+
+
+/* @paragraphs
+--------------------------------------------------------
+
+  Example: Paragraphs
+  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+
+--------------------------------------------------------  */
+
+p {
+  font-size: 1.25em;
+  line-height: 1.5;
+}
+
+
+
+
+/**
+
+  @lists
+--------------------------------------------------------
+  elements/_lists.scss
+--------------------------------------------------------
+
+  Structure for lists
+
+  Example: Unordered List
+  <ul>
+    <li>List item here</li>
+    <li>List item here</li>
+    <li>
+      <ul>
+        <li>Nested Item</li>
+        <li>Nested Item</li>
+      </ul>
+    </li>
+  </ul>
+
+  Example: Ordered List
+  <ol>
+    <li>List item here</li>
+    <li>List item here</li>
+    <li>
+      <ol>
+        <li>Nested Item</li>
+        <li>Nested Item</li>
+      </ul>
+    </li>
+  </ol>
+
+-------------------------------------------------------- */
+
+ul,
+ol {
+  padding-left: 0;
+  margin-left: 1em;
+  margin-bottom: 1em;
+  li {
+  }
+}
+
+
+
+
+
+/* @anchors
+--------------------------------------------------------
+
+  Anchors will have this base styling
+
+  Example: anchor link in a paragraph
+  <p>Here's some text and then <a href="#" title="a link">a link</a></p>
+
+------------------------------------------------------ */
+
+a {
+  color: inherit;
+  opacity: .8;
+  &:hover,
+  &:focus {
+    opacity: 1;
+    
+  }
+}
+
+// Declare the webkit tap highlight style
+body {
+  -webkit-tap-highlight-color: rba(0, 0, 0, .35);
+}
+
+
+
+
+
+
+/* @address
+--------------------------------------------------------
+
+  Example: Address
+  <address>
+    1234 Main St.<br>
+    Anytown, USA 12345
+  </address>
+
+------------------------------------------------------ */
+
+address {
+  white-space: pre-line; 
+  font-style: normal; 
+}
+
+
+
+
+
+/* @horizontal rule
+--------------------------------------------------------
+  Example:
+  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+  <hr>
+  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+
+-------------------------------------------------------- */
+
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+
+
+

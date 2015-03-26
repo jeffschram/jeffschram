@@ -1,0 +1,140 @@
+
+/**
+
+  @posts
+--------------------------------------------------------
+  modules/_po    sts.scss
+--------------------------------------------------------
+
+  Blog Posts
+
+-----------------------------------------------------  */
+
+.post {
+	@include clearfix();
+}
+
+
+.post__lead {
+  @include serif();
+  font-weight: 400;
+  line-height: 1.75;
+  margin: 1.35em 0 2em;
+  font-size: 1em;
+  font-style: italic;
+  opacity: .75;
+}
+
+.post__main {
+	@include clearfix();
+	margin-top: 2em;
+}
+
+
+.post__body {
+	margin-top: -.5em;
+
+	@media (min-width: 35em) {
+		float: right;
+  	width: 70%;
+  }
+  
+  @media (min-width: 48.125em) {
+	  width: 65%;
+    margin-right: 15%;
+  }
+
+  > * + * {
+  	margin-top: 1em;
+  }
+
+  @media (min-width: 35em) {
+		.alignleft {
+		  float: left;
+		  margin: 1em 1em 1em -5em;
+		  width: 50%;
+		  figcaption {
+		  	align: left;
+		  }
+		}
+		.alignright {
+		  float: right;
+		  margin: 1em -5em 1em 1em;
+		  width: 50%;
+		  figcaption {
+		  	align: left;
+		  }
+		}
+
+		.alignfull {
+			margin: 2em -5em;
+			width: calc(100% + 10em);
+			max-width: 200%;
+		}
+
+		iframe {
+		  margin: 2em -10%;
+		  width: 120% !important;
+		}
+	}
+
+}
+
+figure {
+	figcaption {
+		opacity: .75;
+		font-size: .75em;
+		padding: .5em;
+	}
+}
+
+.post__topics {
+  width: auto;
+  padding: 2em 0;
+  @media (min-width: 35em) {
+  	float: left;
+    width: 30%;
+  	padding: 0 2em 2em 0;
+  }
+  @media (min-width: 48.125em) {
+    width: 20%;
+  }
+  ul {
+  	@include clearfix();
+    margin: 0;
+    padding-top: .5em;
+    list-style-type: none;
+    display: block;
+    margin-bottom: .25em;
+    &:first-child {
+      border-top: 1px solid;
+    }
+  }
+  li {
+    @include sans();
+    line-height: 2;
+    font-size: .65em;
+    text-transform: uppercase;
+    float: left;
+    &:before {
+    	content: ", ";
+    }
+    &:nth-child(1):before {
+    	content: "";
+    }
+    &:nth-child(2):before {
+    	content: ": ";
+    }
+    @media (min-width: 35em) {
+    	&:before {
+    		display: none;
+    	}
+    	float: none;
+    	display: block;
+    }
+  }
+  a {
+  	@include sans-light();
+    text-decoration: none;
+  }
+}

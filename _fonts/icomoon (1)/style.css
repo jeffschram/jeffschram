@@ -1,0 +1,93 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?oet4n');
+	src:url('fonts/icomoon.eot?#iefixoet4n') format('embedded-opentype'),
+		url('fonts/icomoon.woff?oet4n') format('woff'),
+		url('fonts/icomoon.ttf?oet4n') format('truetype'),
+		url('fonts/icomoon.svg?oet4n#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-book2:before {
+	content: "\e714";
+}
+
+.icon-bookmark2:before {
+	content: "\e716";
+}
+
+.icon-user:before {
+	content: "\e71e";
+}
+
+.icon-compass2:before {
+	content: "\e780";
+}
+
+.icon-tv:before {
+	content: "\e7b5";
+}
+
+.icon-icons2:before {
+	content: "\e880";
+}
+
+.icon-cross:before {
+	content: "\e92a";
+}
+
+.icon-menu:before {
+	content: "\e92b";
+}
+
+.icon-chevron-left:before {
+	content: "\e93b";
+}
+
+.icon-chevron-right:before {
+	content: "\e93c";
+}
+
+.icon-play-circle:before {
+	content: "\e96a";
+}
+
+.icon-mail2:before {
+	content: "\ea84";
+}
+
+.icon-instagram:before {
+	content: "\ea90";
+}
+
+.icon-twitter2:before {
+	content: "\ea92";
+}
+
+.icon-vimeo2:before {
+	content: "\ea9d";
+}
+
+.icon-github4:before {
+	content: "\eab4";
+}
+
+.icon-soundcloud2:before {
+	content: "\eac5";
+}
+
