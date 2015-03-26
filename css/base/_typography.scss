@@ -135,7 +135,10 @@ h1, .h1 {
   text-transform: uppercase;
   letter-spacing: -.01em;
   font-size: 1.5em;
-  font-size: 7vw;
+  font-size: 10vw;
+  @include bp-at-least($breakpoint__sm) {
+    font-size: 8vw;
+  }
   @include bp-at-least($breakpoint__md) {
     font-size: 6vw;
   }
