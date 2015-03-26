@@ -214,11 +214,15 @@ body {
   font-weight: 400;
   font-style: normal;
   line-height: 1.5;
-  color: #f9eddf; }
+  color: #f9eddf;
+  font-size: 90%; }
   body i, body em {
     font-style: italic; }
   body b, body strong {
     font-weight: 700; }
+  @media screen and (min-width: 48em) {
+    body {
+      font-size: 100%; } }
   @media (min-width: 70em) {
     body {
       font-size: 1.35vw; } }
@@ -230,20 +234,19 @@ body {
 ------------------------------------------------------ */
 h1, .h1 {
   font-family: "Lato", helvetica, arial, sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
   letter-spacing: .05em;
   line-height: 1.225;
-  font-size: 2.5em;
   margin-top: -.35em;
   margin-bottom: .25em;
   text-transform: uppercase;
-  letter-spacing: -.01em; }
-  h1 b, h1 strong, .h1 b, .h1 strong {
-    font-family: "Lato", helvetica, arial, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: .05em; }
+  letter-spacing: -.01em;
+  font-size: 1.5em;
+  font-size: 7vw; }
+  @media screen and (min-width: 48em) {
+    h1, .h1 {
+      font-size: 4vw; } }
 
 h2, .h2 {
   font-family: "Playfair Display", georgia, "Times New Roman", serif;
@@ -3713,8 +3716,7 @@ img {
   line-height: 1.75;
   margin: 1.35em 0 2em;
   font-size: 1em;
-  font-style: italic;
-  opacity: .75; }
+  font-style: italic; }
   .post__lead i, .post__lead em {
     font-style: italic; }
   .post__lead b, .post__lead strong {

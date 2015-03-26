@@ -108,6 +108,10 @@ body {
   @include serif();
   line-height: 1.5;
   color: $color__offwhite;
+  font-size: 90%;
+  @include bp-at-least($breakpoint__md) {
+    font-size: 100%;
+  }
   @media (min-width: 70em) {
       font-size: 1.35vw;
   }
@@ -124,13 +128,18 @@ body {
 
 // H1
 h1, .h1 {
-  @include sans-light();
+  @include sans();
   line-height: 1.225;
-  font-size: 2.5em;
   margin-top: -.35em;
   margin-bottom: .25em;
   text-transform: uppercase;
   letter-spacing: -.01em;
+  font-size: 1.5em;
+  font-size: 7vw;
+  @include bp-at-least($breakpoint__md) {
+    font-size: 4vw;
+    // @include sans-light();
+  }
 }
 
 
