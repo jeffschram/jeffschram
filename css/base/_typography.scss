@@ -106,7 +106,7 @@ html {
 
 html {
   background: $color__white;
-  background: $color__black;
+  //background: $color__black;
   //background: #f9eddf;
   //background: rgba(#dbe8ea, .2);
   //background: rgba(#d7eadf, .2);
@@ -119,18 +119,15 @@ body {
   @include serif();
   line-height: 1.5;
   color: $color__black;
-  background: $color__offwhite;
+  //background: $color__offwhite;
   font-size: 90%;
   @include bp-at-least($breakpoint__md) {
     font-size: 100%;
-      margin: 0 4vw;
   }
   @media (min-width: 70em) {
-      margin: 0 4vw;
       font-size: 1.35vw;
   }
   @media (min-width: 80em) {
-      margin: 0 6vw; 
       font-size: 1.25vw;
   }
 }
