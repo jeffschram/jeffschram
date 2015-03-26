@@ -137,8 +137,10 @@ h1, .h1 {
   font-size: 1.5em;
   font-size: 7vw;
   @include bp-at-least($breakpoint__md) {
+    font-size: 6vw;
+  }
+  @include bp-at-least($breakpoint__lg) {
     font-size: 4vw;
-    // @include sans-light();
   }
 }
 

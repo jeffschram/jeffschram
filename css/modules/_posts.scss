@@ -112,7 +112,7 @@ figure {
   li {
     @include sans();
     line-height: 2;
-    font-size: .65em;
+    font-size: .85em;
     text-transform: uppercase;
     float: left;
     &:before {
@@ -122,7 +122,7 @@ figure {
     	content: "";
     }
     &:nth-child(2):before {
-    	content: ": ";
+    	content: "\00a0  ";
     }
     @media (min-width: 35em) {
     	&:before {
@@ -130,6 +130,9 @@ figure {
     	}
     	float: none;
     	display: block;
+    }
+    @include bp-at-least($breakpoint__lg) {
+      font-size: .65em;
     }
   }
   a {

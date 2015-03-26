@@ -246,6 +246,9 @@ h1, .h1 {
   font-size: 7vw; }
   @media screen and (min-width: 48em) {
     h1, .h1 {
+      font-size: 6vw; } }
+  @media screen and (min-width: 64em) {
+    h1, .h1 {
       font-size: 4vw; } }
 
 h2, .h2 {
@@ -3669,6 +3672,7 @@ img {
 
 ------------------------------------------------------ */
 .site-footer {
+  display: none;
   padding: 1em 0;
   border-top: 1px solid #beb5ac; }
 
@@ -3800,7 +3804,7 @@ figure figcaption {
     font-style: normal;
     letter-spacing: .05em;
     line-height: 2;
-    font-size: .65em;
+    font-size: .85em;
     text-transform: uppercase;
     float: left; }
     .post__topics li:before {
@@ -3808,13 +3812,16 @@ figure figcaption {
     .post__topics li:nth-child(1):before {
       content: ""; }
     .post__topics li:nth-child(2):before {
-      content: ": "; }
+      content: "\00a0  "; }
     @media (min-width: 35em) {
       .post__topics li {
         float: none;
         display: block; }
         .post__topics li:before {
           display: none; } }
+    @media screen and (min-width: 64em) {
+      .post__topics li {
+        font-size: .65em; } }
   .post__topics a {
     font-family: "Lato", helvetica, arial, sans-serif;
     font-weight: 300;
