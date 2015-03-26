@@ -9,14 +9,14 @@
 
 ------------------------------------------------------ */
 
-$black-opaque: rgba($color__black, .5);
-
 .site-header {
   @include clearfix();
   position: relative;
   padding: 1em 0;
   border-bottom: 1px solid $color__offwhite;
-  border-color: rgba($color__offwhite, .5);
+  // border-color: rgba($color__offwhite, .5);
+  color: $color__offwhite;
+  background: $color__black;
   @include bp-at-least($breakpoint__md) {
     text-align: center;
   }

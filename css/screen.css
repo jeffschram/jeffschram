@@ -209,12 +209,16 @@ html {
 
 /* @body
 ------------------------------------------------------ */
+html {
+  background: white;
+  background: #f9eddf; }
+
 body {
   font-family: georgia, "Times New Roman", serif;
   font-weight: 400;
   font-style: normal;
   line-height: 1.5;
-  color: #f9eddf;
+  color: #3c3b43;
   font-size: 90%; }
   body i, body em {
     font-style: italic; }
@@ -658,10 +662,6 @@ hr {
   color is different than the html.
 
 ------------------------------------------------------ */
-html {
-  background: white;
-  background: #3c3b43; }
-
 /**
 
   @buttons
@@ -3568,7 +3568,8 @@ img {
   position: relative;
   padding: 1em 0;
   border-bottom: 1px solid #f9eddf;
-  border-color: rgba(249, 237, 223, 0.5); }
+  color: #f9eddf;
+  background: #3c3b43; }
   .site-header:before, .site-header:after {
     content: " ";
     display: table; }

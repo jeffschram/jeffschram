@@ -104,10 +104,21 @@ html {
 /* @body
 ------------------------------------------------------ */
 
+html {
+  background: $color__white;
+  background: $color__offwhite;
+  //background: #f9eddf;
+  //background: rgba(#dbe8ea, .2);
+  //background: rgba(#d7eadf, .2);
+  //background: #f5ebd7;
+  //border: 4em solid white;
+  //border-top: none;
+}
+
 body {
   @include serif();
   line-height: 1.5;
-  color: $color__offwhite;
+  color: $color__black;
   font-size: 90%;
   @include bp-at-least($breakpoint__md) {
     font-size: 100%;
